@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../static/css/TodoGenerator.css"
+import "../static/css/TodoGenerator.css";
 
 function TodoGenerator(props) {
   const { addTodoItem } = props;
@@ -10,7 +10,10 @@ function TodoGenerator(props) {
   };
 
   const handleAddItem = () => {
-    addTodoItem(inputValue);
+    if (inputValue !== "") {
+      addTodoItem(inputValue);
+      setInputValue("");
+    }
   };
 
   return (

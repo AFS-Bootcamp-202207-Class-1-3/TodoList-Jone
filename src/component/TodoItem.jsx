@@ -4,7 +4,7 @@ function TodoItem(props) {
 
   return (
     <div className="todo-item">
-      <p>{todoItem}</p>
+      <li>{todoItem}</li>
     </div>
   );
 }
